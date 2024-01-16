@@ -2,9 +2,9 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-int main()
-{
-         int a[12];
+
+void wypelnijTab() { 
+    int a[12];
 
     srand( time( NULL ) );
     for(int i=0; i<12; i++)
@@ -15,5 +15,14 @@ int main()
     {
         cout << a[i] << " ";
     }
+}
+
+
+
+int main(){
+    
+wypelnijTab();
+
+
     return 0;
 }
