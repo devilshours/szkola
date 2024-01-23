@@ -3,47 +3,50 @@
 #include <ctime>
 using namespace std;
 
-void wypelnijTab(int a[], int size) { 
+
+int a[12];
+const int n = 12;
+
+void wypelnijTab() { 
     srand( time( NULL ) );
-    for(int i = 0; i < size; i++)
-    {
+    for(int i = 0; i < 12; i++){
         a[i] = rand() % 100 + 1;
     }
 }
+void drukujTab() {
+    for (int i = 0; i < 12; i++){
+        cout << a[i] << " ";
+    }
+}
 
-void sortujBombelkowo(int arr[], int n) {
+
+
+void sortujBombelkowo(int a[], int n) {
     for (int i = 0; i < n-1; i++) {
         for (int j = 0; j < n-i-1; j++) {
-            if (arr[j] > arr[j+1]) {
-                // zamiana miejscami
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+            if (a[j] > a[j+1]) {
+                int temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
             }
         }
     }
 }
 
-void drukujTab(int arr[], int size) {
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-}
+
+
 
 int main(){
-    const int rozmiar = 12;
-    int a[rozmiar];
-    
-    wypelnijTab(a, rozmiar);
+
+    wypelnijTab();
     
     cout << "Tablica przed sortowaniem bombelkowym:\n";
-    drukujTab(a, rozmiar);
+    drukujTab();
 
-    sortujBombelkowo(a, rozmiar);
+    sortujBombelkowo(a, n);
 
     cout << "\n\nTablica po sortowaniu bombelkowym:\n";
-    drukujTab(a, rozmiar);
+    drukujTab();
 
     return 0;
 }
