@@ -4,30 +4,30 @@
 using namespace std;
 
 
-int a[12];
+int tab[12];
 const int n = 12;
 
 void wypelnijTab() { 
     srand( time( NULL ) );
     for(int i = 0; i < 12; i++){
-        a[i] = rand() % 100 + 1;
+        tab[i] = rand() % 100 + 1;
     }
 }
 void drukujTab() {
     for (int i = 0; i < 12; i++){
-        cout << a[i] << " ";
+        cout << tab[i] << " ";
     }
 }
 
 
 
-void sortujBombelkowo(int a[], int n) {
+void sortujBombelkowo() {
     for (int i = 0; i < n-1; i++) {
         for (int j = 0; j < n-i-1; j++) {
-            if (a[j] > a[j+1]) {
-                int temp = a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
+            if (tab[j] > tab[j+1]) {
+                int temp = tab[j];
+                tab[j] = tab[j+1];
+                tab[j+1] = temp;
             }
         }
     }
@@ -36,17 +36,16 @@ void sortujBombelkowo(int a[], int n) {
 
 
 
+
 int main(){
 
     wypelnijTab();
-    
-    cout << "Tablica przed sortowaniem bombelkowym:\n";
     drukujTab();
+    cout << "<-- nieposortowana tablica\n";
 
-    sortujBombelkowo(a, n);
+    sortujBombelkowo();
 
-    cout << "\n\nTablica po sortowaniu bombelkowym:\n";
     drukujTab();
-
+    cout <<  "<-- posortowana tablica";
     return 0;
 }
