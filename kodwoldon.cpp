@@ -33,10 +33,6 @@ void sortujBombelkowo() {
     }
 }
 
-
-
-
-
 int main(){
 
     wypelnijTab();
