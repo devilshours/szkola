@@ -8,6 +8,7 @@ int* SortujScalaniem(int arr[], int l, int r);
 int podzial(int tablica[], int dolny, int gorny);
 int* SortujSzybko(int arr[], int dolny, int gorny);
 
+int* SortujPrzezWstawianie(int tab[], int n);
 
 
 
