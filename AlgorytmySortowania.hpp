@@ -1,1 +1,5 @@
-void SortujBombelkowo(int tab[], int n);
+void SortujBombelkowo(int tab[], int n); 
+
+
+
+
