@@ -7,7 +7,7 @@ int tab[12];
 const int n = 12;
 
 void wypelnijTab() { 
-    srand( time( NULL ) );
+    srand(time(NULL));
     for(int i = 0; i < 12; i++){
         tab[i] = rand() % 100 + 1;
     }
@@ -35,8 +35,7 @@ void SortujBombelkowo(int tab[], int n) {
 void SortujKoktajlowo(int tab[], int rozmiar) {
     bool zamienione = true;
     int poczatek = 0;
-    int koniec = rozmiar - 1;
-    
+    int koniec = rozmiar - 1;    
     while (zamienione) {
         zamienione = false;        
         // Sortowanie od lewej do prawej
@@ -56,8 +55,7 @@ void SortujKoktajlowo(int tab[], int rozmiar) {
                 swap(tab[i], tab[i + 1]);
                 zamienione = true;
             }
-        }
-        
+        }        
         ++poczatek;
     }
 }
@@ -108,8 +106,7 @@ int* SortujScalaniem(int arr[], int l, int r) {
 
 int podzial(int tablica[], int dolny, int gorny) {
     int os = tablica[gorny];
-    int i = dolny - 1;
-    
+    int i = dolny - 1;    
     for (int j = dolny; j < gorny; ++j) {
         if (tablica[j] < os) {
             ++i;
@@ -146,9 +143,7 @@ int* SortujPrzezWstawianie(int tab[], int n) {
 
 
 int main(){
-
-
-
+    
     wypelnijTab();
     drukujTab();
     cout << "<-- nieposortowana tablica\n";
