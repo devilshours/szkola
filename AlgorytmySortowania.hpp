@@ -8,3 +8,4 @@ void Scal(int tab[], int lewy, int srodek, int prawy);
 
 
 
+
