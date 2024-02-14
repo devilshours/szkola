@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "AlgorytmySortowania.hpp"
 
 using namespace std;
