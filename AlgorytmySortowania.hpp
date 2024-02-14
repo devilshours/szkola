@@ -5,3 +5,4 @@ void SortujKoktajlowo(int tab[], int rozmiar);
 
 
 
+
