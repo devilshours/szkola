@@ -6,9 +6,6 @@
 using namespace std;
 
 int main(){
-
-
-
     wypelnijTab();
     drukujTab();
     cout << "<-- nieposortowana tablica\n";
